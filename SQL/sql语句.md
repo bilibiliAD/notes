@@ -1,5 +1,5 @@
 * **查询过滤**
-    * [1.GROUP BY]分组(#1GROUPBY)
+    * [1.GROUP BY]分组(#GROUPBY)
 
 
 
