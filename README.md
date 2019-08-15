@@ -3,4 +3,4 @@
 
 ## SQL
 
-* [sql语句](sql语句.md)
+* [sql语句](SQL/sql语句.md)
