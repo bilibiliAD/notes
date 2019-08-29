@@ -1,10 +1,13 @@
 * **Stream**
-    * [1.Map](#1Map)
+    * [1.map](#1map)
+    * [2.peek](#2peek)
+    
 
 
 
 
-## 1.Map
+
+## 1.map
 
 map生成的是个一对一映射,for的作用
 比较常用
@@ -23,3 +26,11 @@ map生成的是个一对一映射,for的作用
 
 	//new 2
 	getList().stream().map(List::getXXX).collect(toList());
+
+
+## 2.peek
+对每个元素执行操作并返回一个新的 Stream
+
+	Stream.of("one", "two", "three", "four")
+ 	.filter(e -> e.length() > 3)
+ 	.peek(e -> e.setName("new name"+_e))
