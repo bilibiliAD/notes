@@ -7,4 +7,4 @@
 
 ## JAVA8
 
-* [stream](JAVA8/stream.md)
+* [stream流](JAVA8/stream.md)
