@@ -1,7 +1,7 @@
 * **Stream**
     * [1.map](#1map)
     * [2.peek](#2peek)
-    
+    * [3.distinct](#3distinct)
 
 
 
