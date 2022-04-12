@@ -9,6 +9,10 @@
 
 * [stream流](JAVA8/stream.md)
 
+## Rides
+
+* [Redis的应用场景](Rides/Redis的应用场景.md)
+
 ## SpringDateJPA
 
 * [Specification](JPA/Specification.md)

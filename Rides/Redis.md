@@ -18,13 +18,13 @@
 ### 代码实现
 
     private static final String GOOD_STOCK = "good:stock:key_:%s";
-     
+
     /**
      * 对redis中库存进行校验并扣减
      */
     private void checkGoodStock(GoodReq goodOrderReq) {
         // 库存key
-        final String stockKey = Good.stockKey(goodOrderReq.getGoodId());
+        final String stockKey = "good:stock:key_"+goodOrderReq.getGoodId();
         String value = redisTemplate.opsForValue().get(stockKey);
         if (ObjectUtils.isEmpty(value)) {
             // 如果缓存中没有库存数据，则进行数据装载
@@ -51,7 +51,7 @@
      */
     private void setGoodStockToRedis(GoodReq goodOrderReq) {
         // 库存key
-        final String stockKey = Good.stockKey(goodOrderReq.getGoodId());
+        final String stockKey = "good:stock:key_"+goodOrderReq.getGoodId();
         // 先去缓存中查询库存是否存在，如果不存在，则进行初始化
         if (ObjectUtils.isEmpty(redisTemplate.opsForValue().get(stockKey))) {
             lockHandler.tryLock("good:lock:key_:%s"+goodOrderReq.getGoodId(), () -> {
